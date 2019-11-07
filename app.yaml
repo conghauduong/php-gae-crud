@@ -1,0 +1,40 @@
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /(.+\.php)$
+  script: \1
+
+- url: /.*
+  secure: always
+  script: index.php
+
+- url: ./?p=lecturers_list
+  script: lecturers_list.php
+
+- url: ./?p=form_add_lecturer
+  script: form_add_lecturer.php
+
+- url: ./?p=form_edit_lecturer
+  script: form_edit_lecturer.php
+
+- url: ./?p=action_add_lecturer
+  script: action_add_lecturer.php
+
+- url: ./?p=action_edit_lecturer
+  script: action_edit_lecturer.php
+
+- url: ./?p=action_delete_lecturer
+  script: action_delete_lecturer.php
+
+- url: ./?p=view_big_query
+  script: view_big_query.php
+
+- url: ./?p=view_baby_names
+  script: view_baby_names.php
+
+
+
